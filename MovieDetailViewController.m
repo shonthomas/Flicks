@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *popularityIcon;
 @property (weak, nonatomic) IBOutlet UILabel *timeIcon;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *infoTopMargin;
+
 @end
 
 @implementation MovieDetailViewController
@@ -65,6 +67,23 @@
     [self.popularityIcon setText:[NSString stringWithUTF8String:"\u265A"]];
     [self.timeIcon setFont:[UIFont fontWithName:@"FujiIcons" size:130]];
     [self.timeIcon setText:[NSString stringWithUTF8String:"\u266A"]];
+    
+    
+//    NSLayoutConstraint *topConstraint = [self.infoView.topAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:0];
+//    topConstraint.active = YES;
+    
+//    NSLayoutConstraint *topConstraint = [self.testView.topAnchor constraintEqualToAnchor:self.bottomLayoutGuide.bottomAnchor constant:-200];
+//    topConstraint.active = YES;
+//    
+//    NSLayoutConstraint *leftConstraint = [self.testView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor];
+//    leftConstraint.active = YES;
+    
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.infoTopMargin.constant = self.view.frame.size.height - 140;
 }
 
 - (NSString *)timeFormatted:(int)totalSeconds
