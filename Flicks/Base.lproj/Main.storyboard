@@ -83,36 +83,6 @@
                                     <size key="footerReferenceSize" width="50" height="50"/>
                                     <inset key="sectionInset" minX="6" minY="4" maxX="5" maxY="4"/>
                                 </collectionViewFlowLayout>
-                                <view key="backgroundView" hidden="YES" contentMode="scaleToFill" id="Sg2-Am-GzA">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdA-LH-mSA">
-                                            <rect key="frame" x="0.0" y="75" width="300" height="125"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="125" id="kfR-72-7sa"/>
-                                            </constraints>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something has gone terribly wrong. Please reload." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-w6-Utm">
-                                            <rect key="frame" x="20" y="120" width="260" height="36"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.93333333333333335" green="0.10196078431372549" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="BdA-LH-mSA" secondAttribute="trailing" id="1fc-lE-dBD"/>
-                                        <constraint firstItem="ePR-w6-Utm" firstAttribute="leading" secondItem="Sg2-Am-GzA" secondAttribute="leading" constant="20" id="5Lh-Va-l0G"/>
-                                        <constraint firstAttribute="trailing" secondItem="ePR-w6-Utm" secondAttribute="trailing" constant="20" id="KX0-a7-idm"/>
-                                        <constraint firstItem="BdA-LH-mSA" firstAttribute="leading" secondItem="Sg2-Am-GzA" secondAttribute="leading" id="Nsy-ZI-UZn"/>
-                                        <constraint firstAttribute="width" constant="300" id="R8I-Rg-gK5"/>
-                                        <constraint firstItem="ePR-w6-Utm" firstAttribute="top" secondItem="Sg2-Am-GzA" secondAttribute="top" constant="120" id="a4I-ZB-ba5"/>
-                                        <constraint firstAttribute="height" constant="200" id="sq5-9Y-j5f"/>
-                                        <constraint firstAttribute="bottom" secondItem="BdA-LH-mSA" secondAttribute="bottom" id="u4n-P7-UdT"/>
-                                    </constraints>
-                                </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="4ZQ-pR-PT2" customClass="MovieGridCell">
                                         <rect key="frame" x="6" y="4" width="100" height="100"/>
@@ -171,6 +141,35 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sg2-Am-GzA">
+                                <rect key="frame" x="150" y="200" width="300" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdA-LH-mSA">
+                                        <rect key="frame" x="0.0" y="75" width="300" height="125"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="kfR-72-7sa"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something has gone terribly wrong. Please reload." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-w6-Utm">
+                                        <rect key="frame" x="20" y="120" width="260" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.10196078431372549" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BdA-LH-mSA" secondAttribute="trailing" id="1fc-lE-dBD"/>
+                                    <constraint firstItem="ePR-w6-Utm" firstAttribute="leading" secondItem="Sg2-Am-GzA" secondAttribute="leading" constant="20" id="5Lh-Va-l0G"/>
+                                    <constraint firstAttribute="trailing" secondItem="ePR-w6-Utm" secondAttribute="trailing" constant="20" id="KX0-a7-idm"/>
+                                    <constraint firstItem="BdA-LH-mSA" firstAttribute="leading" secondItem="Sg2-Am-GzA" secondAttribute="leading" id="Nsy-ZI-UZn"/>
+                                    <constraint firstAttribute="width" constant="300" id="R8I-Rg-gK5"/>
+                                    <constraint firstItem="ePR-w6-Utm" firstAttribute="top" secondItem="Sg2-Am-GzA" secondAttribute="top" constant="120" id="a4I-ZB-ba5"/>
+                                    <constraint firstAttribute="height" constant="200" id="sq5-9Y-j5f"/>
+                                    <constraint firstAttribute="bottom" secondItem="BdA-LH-mSA" secondAttribute="bottom" id="u4n-P7-UdT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.8293269231" green="0.60694193370000005" blue="0.067559138549999995" alpha="0.87386853450000002" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -180,15 +179,24 @@
                             <constraint firstAttribute="bottom" secondItem="ocj-GL-tos" secondAttribute="bottom" id="Lbf-jV-XBp"/>
                             <constraint firstItem="ayQ-Rz-OoM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OSl-80-y71"/>
                             <constraint firstItem="ocj-GL-tos" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RlL-Hk-RRc"/>
+                            <constraint firstItem="Sg2-Am-GzA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V5E-Rz-a8g"/>
                             <constraint firstAttribute="trailing" secondItem="ayQ-Rz-OoM" secondAttribute="trailing" id="VIe-FO-dDh"/>
                             <constraint firstAttribute="trailing" secondItem="ocj-GL-tos" secondAttribute="trailing" id="b36-bC-tru"/>
                             <constraint firstAttribute="trailing" secondItem="A3K-Q5-hDN" secondAttribute="trailing" id="dGD-gd-vua"/>
                             <constraint firstItem="ocj-GL-tos" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lh6-qU-PDS"/>
+                            <constraint firstItem="Sg2-Am-GzA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ml3-7R-9eT"/>
                             <constraint firstItem="A3K-Q5-hDN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r7w-uL-siD"/>
                             <constraint firstItem="onb-xc-eAY" firstAttribute="top" secondItem="ocj-GL-tos" secondAttribute="bottom" id="ty0-mZ-Byz"/>
                             <constraint firstItem="ayQ-Rz-OoM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vme-1S-veD"/>
                             <constraint firstItem="onb-xc-eAY" firstAttribute="top" secondItem="A3K-Q5-hDN" secondAttribute="bottom" id="wuT-Eh-clk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="b36-bC-tru"/>
+                                <exclude reference="lh6-qU-PDS"/>
+                                <exclude reference="ty0-mZ-Byz"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="UGF-6l-02c">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="6ZK-SV-0iq">
